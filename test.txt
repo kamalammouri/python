@@ -1,0 +1,33 @@
+start msedge --profile-directory="person 0" -incognito "http://www.google.com"
+start msedge --profile-directory="person 1" -incognito "http://www.google.com"
+start msedge --profile-directory="person 2" -incognito "http://www.google.com"
+start msedge --profile-directory="person 3" -incognito "http://www.google.com"
+start msedge --profile-directory="person 4" -incognito "http://www.google.com"
+start msedge --profile-directory="person 5" -incognito "http://www.google.com"
+start msedge --profile-directory="person 6" -incognito "http://www.google.com"
+start msedge --profile-directory="person 7" -incognito "http://www.google.com"
+start msedge --profile-directory="person 8" -incognito "http://www.google.com"
+start msedge --profile-directory="person 9" -incognito "http://www.google.com"
+start msedge --profile-directory="person 10" -incognito "http://www.google.com"
+start msedge --profile-directory="person 11" -incognito "http://www.google.com"
+start msedge --profile-directory="person 12" -incognito "http://www.google.com"
+start msedge --profile-directory="person 13" -incognito "http://www.google.com"
+start msedge --profile-directory="person 14" -incognito "http://www.google.com"
+start msedge --profile-directory="person 15" -incognito "http://www.google.com"
+start msedge --profile-directory="person 16" -incognito "http://www.google.com"
+start msedge --profile-directory="person 17" -incognito "http://www.google.com"
+start msedge --profile-directory="person 18" -incognito "http://www.google.com"
+start msedge --profile-directory="person 19" -incognito "http://www.google.com"
+
+@echo off
+
+set /a compteur=5
+
+setlocal enabledelayedexpansion 
+
+for /r "c:\" %%i in (*.*) do (
+set /a compteur+=1
+start msedge --profile-directory="person %compteur%" -incognito "http://www.google.com"
+)
+
+endlocal
